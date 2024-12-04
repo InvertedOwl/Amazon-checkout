@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Cart</title>
+</head>
+<body>
+    <nav class="nav">
+        <ul class="nav-list">
+            <li class="options"><img src="./logo.png" alt="amazon-logo"></li>
+            <li class="options"><input type="text" placeholder="Search Amazon"><button>Search</button></li>
+            <li class="options"><a href="#">Account & Lists</a></li>
+            <li class="options"><a href="#">Returns & Orders</a></li>
+            <li class="options"><a href="./cart.html">Cart</a></li>
+        </ul>
+
+        <ul class="main-list">
+            <li class="options"><a href="#">All</a></li>
+            <li class="options"><a href="#">Today's deals</a></li>
+            <li class="options"><a href="#">Customer Service</a></li>
+            <li class="options"><a href="#">Registry</a></li>
+            <li class="options"><a href="#">Gift Cards</a></li>
+            <li class="options"><a href="#">Sell</a></li>
+            <li class="options"><a href="pharmacy.html">Pharmacy</a></li>
+        </ul>
+    </nav>
+    <section class="cart">
+        <div class="items">
+            <h2 class="cart-heading">Shopping Cart</h2>
+
+            <div class="cart-item">
+                <div class="c-img" style="background-image: url('./p3.jpg');"></div>
+                <div class="c-details">
+                    <div class="p-name">Outdoor Rocker Camping Chair</div>
+                    <div class="stock">In Stock</div>
+                    <div class="c-options">
+                        <select name="qty" id="">
+                            <option value="0">0</option>
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10+</option>
+                        </select>
+                        <button class="c-button">Delete</button>
+                        <button class="c-button">Save for later</button>
+                        <button class="c-button">Compare with similar items</button>
+                        <button class="c-button">Share</button>
+                    </div>
+                </div>
+                <div class="c-price-con">
+                    <div class="price">$55.99</div>
+                    <div class="crossed-price">$69.99</div>
+                </div>
+            </div>
+            <div class="cart-item">
+                <div class="c-img" style="background-image: url('./p1.jpg');"></div>
+                <div class="c-details">
+                    <div class="p-name">NVMe Internal Gaming SSD Solid State Drive</div>
+                    <div class="stock">In Stock</div>
+                    <div class="c-options">
+                        <select name="qty" id="">
+                            <option value="0">0</option>
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10+</option>
+                        </select>
+                        <button class="c-button">Delete</button>
+                        <button class="c-button">Save for later</button>
+                        <button class="c-button">Compare with similar items</button>
+                        <button class="c-button">Share</button>
+                    </div>
+                </div>
+                <div class="c-price-con">
+                    <div class="price">$549.99</div>
+                    <div class="crossed-price">$799.99</div>
+                </div>
+            </div>
+            <div class="price-total">
+                Subtotal (2 items): <span class="total">$605.98</span>
+            </div>
+        </div>
+        <div class="total-con">
+            <div>Subtotal (2 items): <span class="total">$605.98</span></div>
+            <a href="./checkout.html">Proceed to checkout</a>
+        </div>
+    </section>
+</body>
+</html>
