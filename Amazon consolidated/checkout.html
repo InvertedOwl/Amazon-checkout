@@ -28,15 +28,32 @@
     </nav>
     <section class="checkout">
         <div class="checkout1">
-            <div class="delivery">
+
+            <!-- Default -->
+            <div class="delivery" id="normaldelivery">
                 <div class="delivery-ad">
-                    <h2 class="heading">Delivering to Riya Jones</h2>
-                    <button>Change</button>
+                    <h2 class="heading" id="delivery-heading">Delivering to Riya Jones</h2>
+                    <button class="change-button" onclick="changeDelivery()">Change</button>
                 </div>
-                <div class="delivery-ad2">
+                <div class="delivery-ad2" id="delivery-body">
                     1234 Apartment, Texas, Y6T E0W, United States
                 </div>
                 <a href="#" class="delivery-ins">Add delivery instructions</a>
+            </div>
+
+            <!-- Change Delivery -->
+            <div class="delivery" id="changedelivery">
+                <div class="delivery-ad">
+                    <h2 class="heading">Delivery Addresses (3)</h2>
+                </div>
+
+                <!-- Address list -->
+                <div id="address-list">
+                    <!-- JS Data will be inserted here -->
+                </div>
+
+                <a href="#">Add a new delivery address</a><br>
+                <button onclick="deliverToThis()">Deliver to this address</button>
             </div>
 
             <div class="pay">
@@ -49,6 +66,24 @@
                 </div>
                 <a href="#" class="pay-ins">Use a gift cards, voucher, or promo code</a>
             </div>
+
+            <!-- Change Pay -->
+            <div class="pay">
+                <div class="pay-ad">
+                    <h2 class="heading">Payment Methods</h2>
+                </div>
+                 <label class="payment-choice" id="choice-payment1">
+                     <input type="radio" name="deliverto" id="pay1" checked="true">
+                     <div>
+                         <div class="delivery-ad2">
+                             <span><strong>Riya Jones</strong><br>Card ending in 2014</span>
+                         </div>
+                         <span><a href="#" class="delivery-ins abutton">Delete card</a></span>
+                     </div>
+                 </label>
+                <a href="#" class="pay-ins">Use a gift cards, voucher, or promo code</a>
+            </div>
+
 
             <div class="checkout-items">
                 <h2 class="heading">Arriving Nov 30, 2024</h2>
@@ -102,34 +137,68 @@
         <div class="total-con checkout2">
             <a href="#">Place your order</a>
             <h5 style="font-weight: normal; margin-top: 2px;">By placing your order, you agree to Amazon's privacy
-                notice and conditions of use.</h4>
-                <table class="checkout-table">
-                    <tr>
-                        <td class="left">Items (2):</td>
-                        <td class="right">$605.98</td>
-                    </tr>
-                    <tr>
-                        <td class="left">Shipping & Handling:</td>
-                        <td class="right">$10</td>
-                    </tr>
-                    <tr>
-                        <td class="left">Estimated Regulatory Fees:</td>
-                        <td class="right">$0.25</td>
-                    </tr>
-                    <tr>
-                        <td class="left">Estimated GST/HST:</td>
-                        <td class="right">$39.25</td>
-                    </tr>
-                    <tr>
-                        <td class="left">Estimated PST/RST/QST:</td>
-                        <td class="right">$0.00</td>
-                    </tr>
-                    <tr>
-                        <td class="left">Order Total:</td>
-                        <td class="right">$655.48</td>
-                    </tr>
-                </table>
+            notice and conditions of use.</h5>
+            <table class="checkout-table">
+                <tr>
+                    <td class="left">Items (2):</td>
+                    <td class="right">$605.98</td>
+                </tr>
+                <tr>
+                    <td class="left">Shipping & Handling:</td>
+                    <td class="right">$10</td>
+                </tr>
+                <tr>
+                    <td class="left">Estimated Regulatory Fees:</td>
+                    <td class="right">$0.25</td>
+                </tr>
+                <tr>
+                    <td class="left">Estimated GST/HST:</td>
+                    <td class="right">$39.25</td>
+                </tr>
+                <tr>
+                    <td class="left">Estimated PST/RST/QST:</td>
+                    <td class="right">$0.00</td>
+                </tr>
+                <tr>
+                    <td class="left">Order Total:</td>
+                    <td class="right">$655.48</td>
+                </tr>
+            </table>
         </div>
     </section>
+
+    <!-- Edit popup -->
+    <div class="edit-address-container" id="edit-popup">
+        <div class="edit-address-content">
+            <div class="xbutton">
+                <button onclick="closeEdit()">x</button>
+            </div>
+            <h1>Edit your shipping address</h1>
+
+            <label for="country" class="edit-label">
+                Country/Region
+                <input type="text" id="edit-country">
+            </label>
+            <label for="country" class="edit-label">
+                Full name
+                <input type="text" id="edit-name">
+            </label>
+            <label for="country" class="edit-label">
+                Street
+                <input type="text" id="edit-street">
+            </label>
+            <label for="country" class="edit-label">
+                State
+                <input type="text" id="edit-state">
+            </label>
+            <label for="country" class="edit-label">
+                City
+                <input type="text" id="edit-city">
+            </label>
+            <button class="use-button" onclick="applyEdits()">Use this address</button>
+        </div>
+    </div>
+
+    <script src="checkout.js"></script>
 </body>
 </html>

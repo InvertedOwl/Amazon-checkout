@@ -339,3 +339,54 @@ table tr:nth-of-type(6) {
 .product img {
     width: 100px;
 }
+
+.change-button {
+    cursor: pointer;
+}
+
+.address-choice, .payment-choice{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+#changedelivery {
+    display: none;
+}
+
+.edit-address-container {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.372);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.xbutton {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+
+}
+.edit-address-content {
+    width: 400px;
+    height: 80%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 25px;
+}
+.edit-label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.use-button {
+    background-color: #fdd911;
+    border: none;
+    border-radius: 150px;
+    padding: 10px;
+    font-size: 15px;
+}
