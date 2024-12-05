@@ -56,10 +56,10 @@
                 <button onclick="deliverToThis()">Deliver to this address</button>
             </div>
 
-            <div class="pay">
+            <div class="pay" id="normalpay">
                 <div class="pay-ad">
-                    <h2 class="heading">Paying with Visa 9009</h2>
-                    <button>Change</button>
+                    <h2 class="heading" id="payheading">Paying with Visa 9009</h2>
+                    <button onclick="changeCard()">Change</button>
                 </div>
                 <div class="pay-ad2">
                     Do not apply equal monthly payments
@@ -68,20 +68,38 @@
             </div>
 
             <!-- Change Pay -->
-            <div class="pay">
+            <div class="pay" id="changepay" style="display: none;">
                 <div class="pay-ad">
                     <h2 class="heading">Payment Methods</h2>
                 </div>
                  <label class="payment-choice" id="choice-payment1">
-                     <input type="radio" name="deliverto" id="pay1" checked="true">
+                     <input type="radio" name="deliverto" id="pay1" checked="true" class="radio-pay">
                      <div>
                          <div class="delivery-ad2">
-                             <span><strong>Riya Jones</strong><br>Card ending in 2014</span>
+                             <span id="pay1text"><strong>Riya Jones</strong><br>Card ending in 9009</span>
                          </div>
                          <span><a href="#" class="delivery-ins abutton">Delete card</a></span>
                      </div>
                  </label>
-                <a href="#" class="pay-ins">Use a gift cards, voucher, or promo code</a>
+                 <label class="payment-choice" id="choice-payment2">
+                    <input type="radio" name="deliverto" id="pay2"  class="radio-pay">
+                    <div>
+                        <div class="delivery-ad2">
+                            <span id="pay2text"><strong>Craig Jacob</strong><br>Card ending in 5015</span>
+                        </div>
+                        <span><a href="#" class="delivery-ins abutton">Delete card</a></span>
+                    </div>
+                </label>
+                <label class="payment-choice" id="choice-payment3">
+                    <input type="radio" name="deliverto" id="pay3"  class="radio-pay">
+                    <div>
+                        <div class="delivery-ad2">
+                            <span id="pay3text"><strong>Abriya Jones</strong><br>Card ending in 2215</span>
+                        </div>
+                        <span><a href="#" class="delivery-ins abutton">Delete card</a></span>
+                    </div>
+                </label>
+                <button onclick="useCard()">Use this card</button>
             </div>
 
 

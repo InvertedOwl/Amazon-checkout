@@ -79,6 +79,8 @@ document.addEventListener("click", function (event) {
         const id = target.closest("label").id.replace("choice", "");
         editAddress(Number(id));
     }
+
+    
 });
 
 function changeDelivery() {
@@ -104,6 +106,37 @@ function deliverToThis() {
 
     document.getElementById("changedelivery").style.display = "none";
     document.getElementById("normaldelivery").style.display = "block";
+}
+
+function changeCard() {
+    document.getElementById("changepay").style.display = "block";
+    document.getElementById("normalpay").style.display = "none";
+}
+
+function useCard() {
+    const radios = document.getElementsByClassName("radio-pay");
+    let selectedId = 0;
+
+    for (let i = 0; i < radios.length; i++) {
+        if (radios[i].checked === true) { // Use '===' for comparison
+            selectedId = i; // Use the index directly from the loop
+            break; // Exit the loop early once the match is found
+        }
+    }    
+
+    const heading = document.getElementById(`payheading`);
+    if (selectedId == 0) {
+        heading.innerHTML = `Card ending in 9009`
+    }
+    if (selectedId == 1) {
+        heading.innerHTML = `Card ending in 5015`
+    }
+    if (selectedId == 2) {
+        heading.innerHTML = `Card ending in 2215`
+    }
+
+    document.getElementById("changepay").style.display = "none";
+    document.getElementById("normalpay").style.display = "block";
 }
 
 function editAddress(id) {
