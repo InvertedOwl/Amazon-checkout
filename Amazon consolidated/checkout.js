@@ -1,7 +1,7 @@
 const deliveryData = [
     {"name": "Riya Jones",  "street": "1234 apartment",  "state": "Texas", "city":  "Y6T E0W",  "country": "United States"},
-    {"name": "Riya Jones2", "street": "1234 apartment2", "state": "Texas2", "city": "Y6T E0W2", "country": "United States"},
-    {"name": "Riya Jones3", "street": "1234 apartment2", "state": "Texas3", "city": "Y6T E0W3", "country": "United States"}
+    {"name": "Craig Jacob", "street": "Park st", "state": "Texas", "city": "Y6T E0W2", "country": "United States"},
+    {"name": "Riya Jones", "street": "Johnson blvd", "state": "Texas", "city": "Y6T E0W3", "country": "United States"}
 ]
 let editid = 0;
 
