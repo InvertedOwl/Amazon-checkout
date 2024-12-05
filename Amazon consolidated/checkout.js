@@ -93,9 +93,9 @@ function deliverToThis() {
     let selectedId = 0;
 
     for (let i = 0; i < radios.length; i++) {
-        if (radios[i].checked === true) { // Use '===' for comparison
-            selectedId = i; // Use the index directly from the loop
-            break; // Exit the loop early once the match is found
+        if (radios[i].checked === true) {
+            selectedId = i;
+            break; 
         }
     }    
 
